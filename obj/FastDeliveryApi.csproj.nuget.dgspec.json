@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi\\FastDeliveryApi.csproj": {}
+    "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi-1\\FastDeliveryApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi\\FastDeliveryApi.csproj": {
+    "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi-1\\FastDeliveryApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi\\FastDeliveryApi.csproj",
+        "projectUniqueName": "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi-1\\FastDeliveryApi.csproj",
         "projectName": "FastDeliveryApi",
-        "projectPath": "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi\\FastDeliveryApi.csproj",
+        "projectPath": "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi-1\\FastDeliveryApi.csproj",
         "packagesPath": "C:\\Users\\lpez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi\\obj\\",
+        "outputPath": "C:\\Users\\lpez\\Documents\\Modulo 01 - BackEnd\\FastDeliveryApi-1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lpez\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.3.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.3, )"

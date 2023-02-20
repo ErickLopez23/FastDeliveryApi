@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Mapster;
 
 using FastDeliveryApi.Entity;
 using FastDeliveryApi.Repositories.Interfaces;
@@ -30,12 +31,13 @@ public class CustomersController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateCustomer([FromBody] CreateCustomerRequest request, CancellationToken cancellationToken)
     {
-        var customer = new Customer(
-            request.Name,
-            request.PhoneNumber,
-            request.Email,
-            request.Address
-        );
+        var customer = request.Adapt<Customer>();
+        // var customer = new Customer(
+        //     request.Name,
+        //     request.PhoneNumber,
+        //     request.Email,
+        //     request.Address
+        // );
 
         _customerRepository.Add(customer);
 
