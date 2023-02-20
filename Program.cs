@@ -1,8 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+
 using FastDeliveryApi.Data;
+using FastDeliveryApi.Middleware;
 using FastDeliveryApi.Repositories;
 using FastDeliveryApi.Repositories.Interfaces;
-
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

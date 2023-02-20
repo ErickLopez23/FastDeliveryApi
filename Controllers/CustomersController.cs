@@ -4,6 +4,7 @@ using Mapster;
 using FastDeliveryApi.Entity;
 using FastDeliveryApi.Repositories.Interfaces;
 using FastDeliveryApi.Models;
+using FastDeliveryApi.Exceptions;
 
 namespace FastDeliveryApi.Controllers;
 
@@ -55,13 +56,18 @@ public class CustomersController : ControllerBase
     {
         if (request.Id != id)
         {
-            return BadRequest("Body Id is not equal than Url Id");
+            throw new BadRequestException("Body Id is not equal than Url Id");
+        }
+
+        if (request.Status != true)
+        {
+            throw new StatusChangementException("You don't have permission to change this data");
         }
 
         var customer = await _customerRepository.GetCustomerById(id);
         if (customer is null)
         {
-            return NotFound($"Customer Not Found With th Id {id}");
+            throw new NotFoundException("Customer", id);
         }
 
         customer.ChangeName(request.Name);
@@ -84,7 +90,7 @@ public class CustomersController : ControllerBase
         var customer = await _customerRepository.GetCustomerById(id);
         if (customer is null)
         {
-            return NotFound($"Customer Not Found With th Id {id}");
+            throw new NotFoundException("Customer", id);
         }
         return Ok(customer);
     }
