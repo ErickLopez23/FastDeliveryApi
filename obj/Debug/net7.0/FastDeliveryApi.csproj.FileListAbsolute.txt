@@ -87,3 +87,4 @@ C:\Users\lpez\Documents\Modulo 01 - BackEnd\FastDeliveryApi-1\obj\Debug\net7.0\F
 C:\Users\lpez\Documents\Modulo 01 - BackEnd\FastDeliveryApi-1\obj\Debug\net7.0\FastDeliveryApi.genruntimeconfig.cache
 C:\Users\lpez\Documents\Modulo 01 - BackEnd\FastDeliveryApi-1\obj\Debug\net7.0\ref\FastDeliveryApi.dll
 C:\Users\lpez\Documents\Modulo 01 - BackEnd\FastDeliveryApi-1\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\lpez\Documents\Modulo 01 - BackEnd\FastDeliveryApi-1\bin\Debug\net7.0\Scrutor.dll

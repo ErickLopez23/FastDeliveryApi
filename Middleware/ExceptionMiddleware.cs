@@ -48,7 +48,7 @@ public class ExceptionMiddleware
                 statusCode = HttpStatusCode.BadRequest;
                 errorDetail.ErrorType = "Bad Request";
                 break;
-            
+
             case StatusChangementException badRequestException:
                 statusCode = HttpStatusCode.BadRequest;
                 errorDetail.ErrorType = "Bad Request";

@@ -14,6 +14,7 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.1",
           "Newtonsoft.Json": "13.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
+          "Scrutor": "4.2.1",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -235,6 +236,18 @@
           "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "7.0.1.0",
             "fileVersion": "7.0.1.0"
+          }
+        }
+      },
+      "Scrutor/4.2.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.Extensions.DependencyModel": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Scrutor.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -693,6 +706,13 @@
       "sha512": "sha512-8txq2CsPWvWO4azZSBmKLKmYsL6dkGrarX2hJZY0Djx6uWZJGH9W0OTE1oHqn+aC5L+xrzyS+TM3kiKw2gdXuA==",
       "path": "npgsql.entityframeworkcore.postgresql/7.0.1",
       "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512"
+    },
+    "Scrutor/4.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nFNpqlwIcseBIUMlTg25t7qYYLk7S0jrEXpZaPo6rhw8860Gnky8pbCYeDxSfKmIoJdMYtVxkbMENiIZbblm/Q==",
+      "path": "scrutor/4.2.1",
+      "hashPath": "scrutor.4.2.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",
