@@ -16,12 +16,38 @@ public class CachedCustomerRepository : ICustomerRepository
         _memoryCache = memoryCache;
     }
 
-    public void Add(Customer customer) =>
-           _decorated.Add(customer);
+    public void Add(Customer customer)
+    {
+        _memoryCache.Remove("getAllCustomers");
+        _decorated.Add(customer);
+    }
 
 
-    public async Task<IReadOnlyCollection<Customer>> GetAll() =>
-        await _decorated.GetAll();
+    // public async Task<IReadOnlyCollection<Customer>> GetAll()
+    // {
+    //     string key = "getAllCustomers";
+    //     return _memoryCache.GetOrCreateAsync(
+    //         key,
+    //         entry =>
+    //         {
+    //             _decorated.GetAll();
+    //         }
+    //     );
+    // }
+    public async Task<IReadOnlyCollection<Customer>> GetAll()
+    {
+         string key = $"customerGetAll";
+        return _memoryCache.GetOrCreateAsync(
+            key,
+            entry =>
+            {
+                entry.SetAbsoluteExpiration(TimeSpan.FromMinutes(2));
+                var getting =  _decorated.GetAll();
+                return getting;
+            }
+        );
+    }
+
 
     public Task<Customer?> GetCustomerById(int id, CancellationToken cancellationToken = default)
     {
